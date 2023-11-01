@@ -9,7 +9,7 @@
 
 # Na przykładzie:
 
-# Mamy zbiór pięcioelementowy {1,2,3,4}
+# Mamy zbiór czteroelementowy {1,2,3,4}
     #Zgodnie z algorytmem, wypisuje wszystkie możliwe jego podzbiory:
     # {∅};{4};{3};{3,4};{2};{2,4};{2,3};{2,3,4};{1};{1,4};{1,3};{1,3,4};{1,2};{1,2,4};{1,2,3,4}
     #Jeżeli miejsca w których znajdują się liczby w zbiorze zastąpie zerami i jedynkami,
