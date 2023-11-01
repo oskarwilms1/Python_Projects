@@ -11,7 +11,7 @@
 
 # Mamy zbiór czteroelementowy {1,2,3,4}
     #Zgodnie z algorytmem, wypisuje wszystkie możliwe jego podzbiory:
-    # {∅};{4};{3};{3,4};{2};{2,4};{2,3};{2,3,4};{1};{1,4};{1,3};{1,3,4};{1,2};{1,2,4};{1,2,3,4}
+    # {∅};{4};{3};{3,4};{2};{2,4};{2,3};{2,3,4};{1};{1,4};{1,3};{1,3,4};{1,2};{1,2,4};{1,2,3};{1,2,3,4}
     #Jeżeli miejsca w których znajdują się liczby w zbiorze zastąpie zerami i jedynkami,
     #Tak, że 0 oznacza, że liczba nie należy do tego podzbioru, a 1 że należy, można uzyskać taki ciąg liczb:
     #Zbiór pusty: 0000
