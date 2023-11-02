@@ -23,15 +23,44 @@
     #Można zauważyć że oznaczenie w ten sposób podzbiorów, tworzy nam ciąg kolejnych liczb w systemie binarnym.
 
 #Zadanie: Napisz program, który dla n-elementowego zbioru, gdzie n jest liczbą wybraną przez użytkownika wypisze wszystkie możliwe jego podzbiory zgodnie z tym algorytemem.
+
+
 x = int(1)
 list = []
-    print("Podaj ilość elementu zbioru:\n")
+xy = int(0)
+print("Podaj ilość elementu zbioru:\n")
 n = int(input())
+podzb = pow(2,n)
 
 while x <= n:
     list.append(x)
     x += 1
 print("Twój zbiór: \n", list)           #Tutaj pytam użytkownika ile elementów ma zbiór, i tworze ten zbiór
+print("Ilość podzbiorów dla tego zbiory wynosi: \n", podzb)
+while xy <= podzb - 1:
+    xy1 = int(0)
+    if xy == 0:
+        print("[∅]")
+        
+    else:      
+        binarne = bin(xy) 
+        str1 = binarne[2:].zfill(n)
+        str2 = "{"
+        while xy1 <= n - 1:
+            if str1[xy1:xy1+1] == "1":
+               str2 = str2 + str(list[xy1]) + ","         
+               
+            
+            xy1 += 1
+        
+        str2 = str2[:-1] + "}"
+        print(str2)
+        
+    xy += 1
+    
+
+
+
 
 
 
