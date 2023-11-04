@@ -25,41 +25,41 @@
 #Zadanie: Napisz program, który dla n-elementowego zbioru, gdzie n jest liczbą wybraną przez użytkownika wypisze wszystkie możliwe jego podzbiory zgodnie z tym algorytemem.
 
 
-x = int(1)
-list = []
-xy = int(0)
-print("Podaj ilość elementu zbioru:\n")
-n = int(input())
-podzb = pow(2,n)
+
+
+x = int(1)                  #Tworzę zmienną, która pozwoli mi na utworzenie pętli tworzącej zbiór liczb od 1 - n
+list = []               #Tworze pustą listę, która będzie służyć jako zbiór liczbowy
+xy = int(0)                 # Tworzę zmienną, która pozwoli mi na utworzenie pętli, w której będę wyświetlał po koleji wszystkie pozdbiory utworzonego zbioru
+print("Podaj ilość elementu zbioru:\n")             #Proszę użytkownika o podanie ile elementów ma mieć zbiór.
+n = int(input())                    #Oznaczam tą liczbę jako n
+podzb = pow(2,n)                    # Liczba wszystkich pozdbiorów tego zbioru oznaczam jako podzb = n^2
 
 while x <= n:
     list.append(x)
     x += 1
-print("Twój zbiór: \n", list)           #Tutaj pytam użytkownika ile elementów ma zbiór, i tworze ten zbiór
-print("Ilość podzbiorów dla tego zbiory wynosi: \n", podzb)
-while xy <= podzb - 1:
+print("Twój zbiór: \n", list)           # Pętla służąca do stworzenia n elementowgo zbioru, gdzie liczba n jest podana przez użytkownika
+print("Ilość podzbiorów dla tego zbiory wynosi: \n", podzb)     # Podaje wartość zmiennej podzb, która oznacza ilość podzbiorów tego zbioru
+while xy <= podzb - 1:      
     xy1 = int(0)
     if xy == 0:
-        print("[∅]")
+        print("[∅]")        # Pierwszy wyraz jest zbiorem pustym
         
     else:      
-        binarne = bin(xy) 
-        str1 = binarne[2:].zfill(n)
-        str2 = "{"
+        binarne = bin(xy)   # zmieniam każdą zmienną xy na zapis binarny, zmienna xy który podzbiór jest teraz analizowany
+        str1 = binarne[2:].zfill(n)     # zmieniam utworzony zapis binarny z standardowego 0b0001 na 0001. Komenda [2:] "ucina" mi znaki 0b a komenda zfill dopełnia mi wyraz zerami
+        str2 = "{" # podzbiory chcę zapisać za pomocą znaków {}
         while xy1 <= n - 1:
             if str1[xy1:xy1+1] == "1":
-               str2 = str2 + str(list[xy1]) + ","         
+               str2 = str2 + str(list[xy1]) + ","        # cała pętla polego na analizowaniu wrzucanego string w postaci np. 00010 tak, że jeśli jest 0 to przechodzi do kolejnego miejsca, a jeśli jest 1 to drukuję odpowiednią liczbę i dodaje ją do podzbioru
                
             
             xy1 += 1
         
         str2 = str2[:-1] + "}"
-        print(str2)
+        print(str2)        #wyśwtl te podzbioru
         
     xy += 1
     
-
-
 
 
 
